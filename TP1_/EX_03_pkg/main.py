@@ -1,4 +1,4 @@
-from src.Rect import rectangle
+from src.MyClasses import rectangle
 
 #Instanciation
 y=int(input("saisir la largeur: "))

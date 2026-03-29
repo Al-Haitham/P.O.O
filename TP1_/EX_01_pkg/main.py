@@ -1,4 +1,4 @@
-from src.etudiant import etudiant
+from src.MyClasses import etudiant
 
 e=etudiant(0,"haitam",22,17)
 e.set_EtdAge(23)

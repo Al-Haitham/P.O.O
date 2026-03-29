@@ -1,4 +1,4 @@
-from src.livre import livre
+from src.MyClasses import livre
 
 #Instanciation
 liv1=livre(0,"The Art of War","Sun Tzu",128,50)
