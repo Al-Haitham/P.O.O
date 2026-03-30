@@ -68,7 +68,7 @@ class livre:
         return moyP
     
     def __str__(self):
-        return f"id: {self.LivId}\nTitre: {self.LivTitre}\nAuteur: {self.LivAut}\nPages: {self.LivNbPg}\nPrix: {self.get_LivPrx()}"
+        print(f"id: {self.LivId}\nTitre: {self.LivTitre}\nAuteur: {self.LivAut}\nPages: {self.LivNbPg}\nPrix: {self.get_LivPrx()}")
 
     @classmethod
     def biblio_Nom(cls,biblNom):
