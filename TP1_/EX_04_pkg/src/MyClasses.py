@@ -23,7 +23,7 @@ class CompteBancaire:
 
     def agios(self):
         if self.solde<0: 
-            self.soldeCmpt*=(1-0.05)
+            self.soldeCmpt*=(1+0.05)
             print("--> agios appliquée de 5%")
         return
 
