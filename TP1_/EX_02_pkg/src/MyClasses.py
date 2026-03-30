@@ -70,9 +70,10 @@ class livre:
     def __str__(self):
         return f"id: {self.LivId}\nTitre: {self.LivTitre}\nAuteur: {self.LivAut}\nPages: {self.LivNbPg}\nPrix: {self.get_LivPrx()}"
 
-    def biblio_Nom(self,biblNom):
+    @classmethod
+    def biblio_Nom(cls,biblNom):
         try:
-            self.biblio=biblNom
+            cls.biblio=biblNom
             print("Nom du biblioteque changé avec succés!")
         except Exception as e:
             print("Erreur de changement de nom: ",e)
