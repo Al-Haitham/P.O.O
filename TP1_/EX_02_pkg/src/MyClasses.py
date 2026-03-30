@@ -60,7 +60,7 @@ class livre:
             print(f"{prix} est un valeur incorrect!")
     
     def affiche_Livre(self):
-        return f"++++++++++++++++++++++++++++\nid: {self.LivId}\nTitre: {self.LivTitre}\nAuteur: {self.LivAut}\nPages: {self.LivNbPg}\nPrix: {self.get_LivPrx()}"
+        print(f"++++++++++++++++++++++++++++\nid: {self.LivId}\nTitre: {self.LivTitre}\nAuteur: {self.LivAut}\nPages: {self.LivNbPg}\nPrix: {self.get_LivPrx()}")
     
     def moy_prx_page(self):
         moyP=self.get_LivPrx()/self.LivNbPg
