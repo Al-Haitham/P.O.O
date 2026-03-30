@@ -12,6 +12,6 @@ liv2.affiche_Livre()
 
 liv1.set_LivPrx(80)
 print(liv1.moy_prx_page())
-liv1.biblio_Nom("TechBiblio")
+livre.biblio_Nom("TechBiblio")
 print(liv1.biblio)
 print(liv2.biblio)
