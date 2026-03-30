@@ -53,11 +53,11 @@ class livre:
     def get_LivPrx(self):
         return self._LivPrx
     
-    def set_LivPrx(self,age):
-        if age>=0:
-            self._LivPrx=age
+    def set_LivPrx(self,prix):
+        if prix>=0:
+            self._LivPrx=prix
         else:
-            print(f"{age} est un valeur incorrect!")
+            print(f"{prix} est un valeur incorrect!")
     
     def affiche_Livre(self):
         return f"++++++++++++++++++++++++++++\nid: {self.LivId}\nTitre: {self.LivTitre}\nAuteur: {self.LivAut}\nPages: {self.LivNbPg}\nPrix: {self.get_LivPrx()}"
