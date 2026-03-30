@@ -1,31 +1,23 @@
-class CompteBancaire:
+import math
+class Cercle:
 
-    def __init__(self,numeroCompte,nomPropr,solde):
-        self.numCmpt=numeroCompte
-        self.nomPropr=nomPropr
-        self.soldeCmpt=solde
-
-    def versement(self,montantVers):
-        if montantVers>=0:
-            try:
-                self.soldeCmpt+=montantVers
-            except Exception as e:
-                print("erreur: ",e)
-        return
-
-    def retrait(self,montantRetr):
-        if montantRetr>=0:
-            try:
-                self.soldeCmpt-=montantRetr
-            except Exception as e:
-                print("erreur: ",e)
-        return
-
-    def agios(self):    
-        self.soldeCmpt*=(1-0.05)
-        print("--> agios appliquée de 5%")
-        return
-
-    def afficher(self):
-        return f"numero du compte: {self.numCmpt}\nnom de proprietaire: {self.nomPropr}\nsolde: {self.soldeCmpt} DHS"
+    def __init__(self,a,b,r):
+        self.a=a
+        self.b=b
+        self.rayon=r
     
+    def surface(self):
+        s=math.pi*(self.rayon)**2
+        print(f"la surface de la cercle {self} est: ",end="")
+        return s
+    
+    def perimetre(self):
+        p=2*math.pi*self.rayon
+        return p
+
+    def testAppartenance(self,x,y):
+        distance=math.sqrt((x-self.a)**2+(y-self.b)**2)
+        if distance==self.rayon:
+            return f"Le point A({x},{y}) appartient au cercle"
+        else:
+            return f"Le point A({x},{y}) n'appartient pas au cercle"
