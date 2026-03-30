@@ -21,9 +21,10 @@ class CompteBancaire:
                 print("erreur: ",e)
         return
 
-    def agios(self):    
-        self.soldeCmpt*=(1-0.05)
-        print("--> agios appliquée de 5%")
+    def agios(self):
+        if self.solde<0: 
+            self.soldeCmpt*=(1-0.05)
+            print("--> agios appliquée de 5%")
         return
 
     def afficher(self):
