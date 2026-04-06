@@ -18,6 +18,8 @@ class Cercle:
     def testAppartenance(self,x,y):
         distance=math.sqrt((x-self.a)**2+(y-self.b)**2)
         if distance==self.rayon:
-            return f"Le point A({x},{y}) appartient au cercle"
+            print(f"Le point A({x},{y}) est sur le cercle")
+        elif distance<self.rayon:
+            print("Le point A({x},{y}) appartient au cercle")
         else:
-            return f"Le point A({x},{y}) n'appartient pas au cercle"
+            print(f"Le point A({x},{y}) n'appartient pas au cercle")

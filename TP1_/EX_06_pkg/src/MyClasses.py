@@ -29,9 +29,10 @@ class Calcul:
 
     def allTablesMult(self):
         for i in range(1,11):
-            print(f"-> table de {i}:")
-            for j in range(1,11):
-                print(f"{i} x {j} = {i*j}")
+            self.tableMult(i)
+            #print(f"-> table de {i}:")
+            #for j in range(1,11):
+                #print(f"{i} x {j} = {i*j}")
             print("")
 
     def listDiv(self,n):
