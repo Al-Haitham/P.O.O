@@ -20,8 +20,9 @@ class SalleCinema:
     
     def taux_remp(self):
         taux=self._places_occupe*100/self.capacite
-        print("le taux de remplisage est: ")
+        print("le taux de remplisage est : ")
         return taux
     
     def afficher(self):
         print(f"Salle cinema {self.nom}: \ncapacité: {self.capacite}\nplaces occupés: {self._places_occupe}")
+        return self._places_occupe
