@@ -1,33 +1,34 @@
 class personne:
     def __init__(self,nom="--",prenom="--",age=0):
-        self._nom=nom
-        self._prenom=prenom
-        self._age=age
+        self.nom=nom
+        self.prenom=prenom
+        self.age=age
     
     def get_nom(self):
-        return self._nom
+        return self.nom
     
     def get_prenom(self):
-        return self._prenom
+        return self.prenom
 
     def get_age(self):
-        return self._age
+        return self.age
 
     def set_nom(self,nom):
-        self._nom=nom
+        self.nom=nom
 
     def set_prenom(self,prenom):
-        self._prenom=prenom
+        self.prenom=prenom
 
     def set_age(self,age):
-        self._age=age
+        self.age=age
     
     def afficher(self):
-        print(f"nom: {self._nom}\nprenom: {self._prenom}\nage: {self._age}") 
+        print(f"nom: {self.nom}\nprenom: {self.prenom}\nage: {self.age}") 
 
 class directeur(personne):
     def __init__(self,nom,prenom,age,salaire):
         super().__init__(nom,prenom,age)
+        #personne.__init__(self, nom, prenom, age)
         self._salaire=salaire
     
     def get_salaire(self):
