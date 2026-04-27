@@ -25,6 +25,7 @@ class phrase(chaine):
 
 
     def longueurMot(self):
+        """
         motList=self.chaine_de_character[0:len(self.chaine_de_character)-1].split()
         max=len(motList[0])
         maxMot=motList[0]
@@ -33,4 +34,8 @@ class phrase(chaine):
                 max=len(motList[i])
                 maxMot=motList[i]
         return f"{maxMot} -> {max} mots"
+        """
+        max_mot=max(self.chaine_de_character.split(),key=len)
+        return max_mot, len(max_mot)
+        
     
