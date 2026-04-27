@@ -1,3 +1,3 @@
-from src.MyClasses import chaine,phrase
+from src.MyClasses import *
 
 #Instanciation
