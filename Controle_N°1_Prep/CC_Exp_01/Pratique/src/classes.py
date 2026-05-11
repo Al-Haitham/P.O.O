@@ -29,9 +29,9 @@ class ChambreStandard(Chambre):
 
     def calculer_prix_nuit(self):
         if self.__petit_dejeuner_inclus==True:
-            return self.__prix_nuit+50
+            return self.get_prix_nuit()+50
         else:
-            return self.__prix_nuit
+            return self.get_prix_nuit()
     
 class Suite(Chambre):
     def __init__(self,nb_pieces, numero=0, prix_nuit=0.0):
@@ -47,7 +47,7 @@ class Suite(Chambre):
             print("nmbre des pieces de suite invalid!")
 
     def calculer_prix_nuit(self):
-        return self.__prix_unit+self.__nb_pieces*200
+        return self.get_prix_unit+self.__nb_pieces*200
     
 class Reservation:
     
@@ -64,4 +64,11 @@ class Reservation:
         return sumCout
        #return sum([c.calculer_prix_nuit()*nb_nuits for c in self.liste_chambre])
 
-    def afficher_details():
+    def afficher_details(self,nb_nuits):
+        print(f"nombre des chambre: {len(self.__liste_chambre)} - le Cout totale: {self.calculer_cout_total}")
+    
+
+    def __len__(self):
+        return len(self.__liste_chambre)
+    
+    
