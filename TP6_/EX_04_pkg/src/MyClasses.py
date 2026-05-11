@@ -1,34 +1,37 @@
-from abc import ABC, abstractmethod
+from abc import ABC,abstractmethod
+class Correcteur(ABC):
+    def __init__(self,reponses_etudiant,corrections):
+        self.reponses_etudiant=reponses_etudiant
+        self.corrections=corrections
 
-class Forme(ABC):
-    def __init__(self,nom):
-        self.nom=nom
+    @abstractmethod
+    def est_valide(self):
+        pass
     
     @abstractmethod
-    def calculer_aire():
+    def calculer_score(self):
         pass
+
     @abstractmethod
-    def dessiner():
+    def afficher_resultat(self):
         pass
 
-class Rectangle:
-    def __init__(self,longueur,largeur):
-        self.longueur=longueur
-        self.largeur=largeur
-    def calculer_aire(self):
-        return self.longueur*self.largeur
-    def dessiner(self):
-        for y in range(0,self.longueur):
-            for x in range(0,self.largeur):
-                print("+",end="")
-            print()
+class CorrcteurQCM(Correcteur):
+    def est_valide(self):
+        if len(self.reponses_etudiant)!=len(self.corrections) and (len([True for r in self.reponses_etudiant if r in self.corrections])==len(self.corrections)):
+            return False
+        for r in self.reponses_etudiant:
+            if r not in set(self.corrections):
+                return False
+    def calculer_score(self):
+        score=0
+        if self.est_valide():
+            for r,c in zip(self.reponses_etudiant,self.corrections):
+                if r==c:
+                    score+=1
+                else:
+                    score-=0.25
+            return score
 
-class Triangle:
-    def __init__(self,hauteur,base):
-        self.hauteur=hauteur
-        self.base=base
-    def calculer_aire(self):
-        return (self.hauteur*self.base)/2
-    def dessiner(self):
-        for b in range(0,self.hauteur):
-            print(" "*(self.hauteur-b-1),"+"*(2*b+1))
+    def afficher_resultat(self):
+        return self.calculer_score

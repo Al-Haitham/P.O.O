@@ -6,13 +6,14 @@ class Vehicule(ABC):
 
     @abstractmethod
     def demarrer(self):
-        print("la vehicule est demarré!")
+        #print("la vehicule est demarré!")
+        pass
     @abstractmethod
     def calculer_vitesse(self):
-        return self.vitesse
-    
+        #return self.vitesse
+        pass
     def afficher_infos(self):
-        print(f"la marque: {self.marque} - {self.calculer_vitesse()} Km/h")
+        print(f"la marque: {self.marque} - {self.vitesse} Km/h")
     
 class voiture(Vehicule):
     def demarrer(self):

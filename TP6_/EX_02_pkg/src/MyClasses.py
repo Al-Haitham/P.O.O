@@ -19,9 +19,8 @@ class Rectangle:
         return self.longueur*self.largeur
     def dessiner(self):
         for y in range(0,self.longueur):
-            for x in range(0,self.largeur):
-                print("+",end="")
-            print()
+            print("+"*self.largeur,end="")
+        print()
 
 class Triangle:
     def __init__(self,hauteur,base):
