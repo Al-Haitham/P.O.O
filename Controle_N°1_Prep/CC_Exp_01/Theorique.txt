@@ -6,13 +6,13 @@ Questions de cours : (5pts)
 5. Définissez l’héritage.
 
 ******Correction******
-1.un objet est un instance d'un classe, avec les attributs et leurs valeurs
-2.une classe est caracterisé par un constructeur permettant l'instanciation, des methods , des attributs de classe et de methods
+1.un objet est un instance d'une classe, avec les attributs et leurs valeurs
+2.une classe est caracterisé par un constructeur permettant l'instanciation, des methods et des attributs de classe et de methods
 3.Un constructeur __init__() est un method de classe appeler automatiquement lors de l'instanciation d'un objet derivé de ce classe.
     il y a trois type de constructeur:
     *constructeur parametré: où on donne des valeurs a la place des parametres (self,valeurs..)
     *constructeur par defaut: où on donne des valeurs au attributs en cas de valeurs ne pas etait determiner (self,param=valeur...)
     *constructeur de copie: où on appeler un objet dans les parametre de constructeur, derivant les meme parametres de l'objet
 4.le polymorphisme est le cas où on a plusieurs methodes de meme nom mais des comportement differents pour s'adapté au different objets
-5.l'héritage est quand une classe herite d'une classe mère , ce qui permet de reutilisé les methode (inclué le constructeur) et les attributs de la classe mère avec la possibilité de redefiner les method pour l'adapter au classes fils
+5.l'héritage est quand une classe herite d'une classe mère , ce qui permet de reutilisé les methode (constructeur inclus) et les attributs de la classe mère avec la possibilité de redéfiner les methods pour l'adapter au classes fils
  

@@ -16,6 +16,10 @@ class Chambre:
 
     def calculer_prix_nuit(self):
         return self.__prix_nuit
+    
+    def __str__(self):
+        print(f"Numero: ${self.get_numero} \nType de Chambre: ${type(self).__name__} \nPrix: ${self.calculer_prix_nuit}")
+
 
 class ChambreStandard(Chambre):
     def __init__(self,petit_dejeuner_inclus, numero=0, prix_nuit=0.0):
@@ -62,11 +66,14 @@ class Reservation:
         for c in self.liste_chambre:
             sumCout+=c.calculer_prix_nuit()*nb_nuits
         return sumCout
-       #return sum([c.calculer_prix_nuit()*nb_nuits for c in self.liste_chambre])
+    def __str__()   #return sum([c.calculer_prix_nuit()*nb_nuits for c in self.liste_chambre])
 
     def afficher_details(self,nb_nuits):
         print(f"nombre des chambre: {len(self.__liste_chambre)} - le Cout totale: {self.calculer_cout_total}")
     
+    def __add__(chambre):
+        if not isinstance(chambre,Chambre):
+            raise TypeError("")
 
     def __len__(self):
         return len(self.__liste_chambre)
