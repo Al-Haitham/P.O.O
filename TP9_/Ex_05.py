@@ -4,11 +4,9 @@ mot="radar"
 d=deque(mot)
 
 #Q1
-palindrome=True
-
+p="Pas palindrome .."
 while len(d) > 1:
-    if d.popleft()!=d.pop():
-        palindrome=False
-        break
+    if d.popleft()==d.pop():
+        p="Palindrome!"
 
-print(palindrome)
+print(p)

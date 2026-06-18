@@ -15,10 +15,7 @@ print(dict(graphe))
 print(graphe["A"])
 
 #Q3
-def chemin(graph, debut, fin, visites=None):
-    if visites is None:
-        visites=set()
-
+def chemin(graph, debut, fin, visites=set()):
     if debut==fin:
         return True
 
@@ -26,9 +23,10 @@ def chemin(graph, debut, fin, visites=None):
 
     for voisin in graph[debut]:
         if voisin not in visites:
+            print(voisin)
             if chemin(graph, voisin, fin, visites):
                 return True
 
     return False
 
-print(chemin(graphe,"A","E"))
+print(chemin(graphe,"A","F"))
