@@ -1,0 +1,6 @@
+Joueur - Score
+-------+-------
+Ali - 1
+Sara - 1
+Omar - 0
+Lina - 2
