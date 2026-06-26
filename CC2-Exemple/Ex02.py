@@ -88,6 +88,7 @@ for l in range(len(matrix)):
         elif matrix[l][p]>maxC:
             maxC=matrix[l][p]
             pair=f"{currentPR} - {currentPC}"
-
 print(pair,maxC,sep=" /",end=" machines\n")
 
+
+#Q08
