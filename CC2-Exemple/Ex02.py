@@ -57,3 +57,37 @@ if len(maxPt)==1:
     print(f"Le protocole le plus utilisé est : {maxPt} ({cMax} machines)")
 else:
     print(f"Les protocoles les plus utilisés sont : {','.join(maxPt)} (chaque utilisé par {cMax} machines)")
+
+
+#Q06
+matrix=[]
+for i in machines:
+    ligne=[]
+    for j in machines:
+        if set(i[1])==set(j[1]):
+            ligne.append(' - ')
+        else:
+            com=set(i[1]) & set(j[1])
+            ligne.append(len(com))
+    matrix.append(ligne)
+
+for l in matrix:
+    print(l)
+
+#Q07
+currentPR=""
+currentPC=""
+maxC=0
+pair=""
+for l in range(len(matrix)):
+    currentPR=machines[l][0]
+    for p in range(len(matrix[l])):
+        currentPC=machines[p][0]
+        if matrix[l][p]==' - ':
+            pass
+        elif matrix[l][p]>maxC:
+            maxC=matrix[l][p]
+            pair=f"{currentPR} - {currentPC}"
+
+print(pair,maxC,sep=" /",end=" machines\n")
+
