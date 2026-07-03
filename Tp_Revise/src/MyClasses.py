@@ -46,17 +46,23 @@ class Taxi(Vehicule):
     #Q06
     def __str__(self):
         return f"immatricule de Taxi:{self.get_immatricule}\nMarque: {self.get_marque}\nAnnee:{self.get_annee}\nPrix d'achat: {self.prixAchat}\nCoût annuel:{self.calculerCoutExploitation}"
-    
+
+#Q07 
 class AgenceTransport():
     def __init__(self):
         self.vehicules=[]
-    
+
+    #Q08
     def add_vehicule(self,veh):
         self.vehicules.append(veh)
         print("vehicule ajouté avec success!")
     
-    def add_vehicule(self,imma):
+    def delete_vehicule(self,imma):
+        self.vehicules=[v for v in self.vehicules if v.get_immatricule!=imma]
+        print("vehicule supprimé avec success!")
+    
+    def rech_vehicule(self,imma):
         for v in self.vehicules:
             if v.get_immatricule==imma:
-                self.vehicules.remove(v)
-        print("vehicule supprimé avec success!")
+                return v
+        return None
